@@ -79,6 +79,7 @@ body {
   display: inline-block;
   background-color: #e67e22;
   font-size: 2rem;
+  font-weight: 600;
   color: #fff;
   text-decoration: none;
 
@@ -86,8 +87,8 @@ body {
   border-radius: 9rem;
 
   /* put transition on original "state" */
-  transition: background-color 0.3s;
-  font-weight: 600;
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
 }
 
 .btn--full:link,
@@ -268,7 +269,33 @@ body {
   font-weight: 700;
 }
 
-/* section-how it work */
+/* SECTION- Featured-in */
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #555;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 0.5;
+}
+
+/* SECTION-how it work */
 .section-how {
   padding: 9.6rem 0;
 }
@@ -357,4 +384,141 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+
+/* SECTION Meals */
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.5rem rgba(0, 0, 0, 0.075);
+  border-radius: 1.1rem;
+  /* ca sa nu mai dau border la imagine, dau hidden la tot ce este peste  */
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.meal:hover {
+  /* transform: translate(0,-2rem); */
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-img {
+  width: 100%;
+  /* border-top-left-radius:1.1rem;
+  border-top-right-radius: 1.1rem; */
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+}
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 600;
+  border-radius: 9rem;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--vegan {
+  background-color: #b2f2bb;
+}
+
+.tag--paleo {
+  background-color: #ffe066;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.meal-icon {
+  color: #cf711f;
+  font-size: 2.4rem;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #cf711f;
+}
+
+/* ALL-recipes */
+/* creez inca o clasa pentru sectiunea de mai sus ca sa pot sa dau un spatiu bottom 
+-puteam sa dau si o margine top sectiuniie, dar este o clasa reutilizabila*/
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #e67e22;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+/* helper class */
+.center-text {
+  text-align: center;
 }
