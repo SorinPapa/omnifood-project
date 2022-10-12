@@ -61,6 +61,12 @@ Medium: 11px
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+  /* outline: 4px dotted; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -73,20 +79,23 @@ body {
 }
 
 /* General Reusable Components */
+.btn,
 .btn:link,
 .btn:visited {
-  /* butoanele sunt elemente inline si ca sa le pot adauga padding trebuie sa il fac inline-block */
   display: inline-block;
-  background-color: #e67e22;
+
+  text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-
   padding: 1.6rem 3.2rem;
-  border-radius: 9rem;
+  border-radius: 9px;
 
-  /* put transition on original "state" */
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  /* Put transition on original "state" */
   /* transition: background-color 0.3s; */
   transition: all 0.3s;
 }
@@ -94,6 +103,7 @@ body {
 .btn--full:link,
 .btn--full:visited {
   background-color: #e67e22;
+  color: #fff;
 }
 
 .btn--full:hover,
@@ -131,7 +141,7 @@ body {
   row-gap: 9.6rem;
 }
 
-.grid:not(:last-child){
+.grid:not(:last-child) {
   margin-bottom: 9.6rem;
 }
 
@@ -671,24 +681,116 @@ strong {
 }
 
 .feature-icon {
-color: #e67e22;
-height: 3.2rem;
-width: 3.2rem;
-background-color: #fdf2e9;
-border-radius: 50%;
-padding: 1.6rem;
-margin-bottom: 3.2rem;
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #fdf2e9;
+  border-radius: 50%;
+  padding: 1.6rem;
+  margin-bottom: 3.2rem;
 }
 
 .feature-title {
-font-size: 2.5rem;
-columns: #333;
-font-weight: 700;
-margin-bottom: 1.6rem;
-
+  font-size: 2.5rem;
+  columns: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
 }
 
 .feature-text {
   font-size: 1.8rem;
   line-height: 1.8;
+}
+
+/* cta-section */
+.section-cta {
+  padding: 9.6rem 0;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  height: 50rem;
+  overflow: hidden;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(248, 247, 246, 0.5);
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+
+.cta .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(227, 136, 61, 0.067),
+      rgba(230, 125, 34, 0.593)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
 }
