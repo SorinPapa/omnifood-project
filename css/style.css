@@ -76,6 +76,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+  overflow-x: hidden;
 }
 
 /* General Reusable Components */
@@ -171,7 +172,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 
 .main-nav-link:link,
@@ -202,6 +203,24 @@ body {
   background-color: #cf711f;
 }
 
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 /* HEADER */
 .header {
   display: flex;
@@ -212,6 +231,8 @@ body {
   /* pentru ca vreau sa il fac mai tarziu, ii dau inaltimea de acum */
   height: 9.6rem;
   padding: 0 4.8rem;
+
+  position:relative;
 }
 /*HERO-SECTION */
 .section-hero {
@@ -496,6 +517,7 @@ strong {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {
@@ -879,3 +901,5 @@ strong {
 .footer-link:active {
   color: #555;
 }
+
+/* RESPONSIVE WEB DESIGN */
